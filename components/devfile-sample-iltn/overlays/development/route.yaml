@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-iltn
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-iltn
+    app.kubernetes.io/part-of: ci10t-786-0069-app
+  name: devfile-sample-iltnhapw
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: devfile-sample-iltn
+    weight: null
+status: {}
